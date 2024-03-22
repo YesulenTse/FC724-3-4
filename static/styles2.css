@@ -1,0 +1,73 @@
+/* stylesheet for the questionnaire */
+/* styles for the form */
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+/* styles for the fieldset */
+fieldset {
+  border: 2px solid black;
+  padding: 2em;
+  border-bottom: 2px solid #3b3b4f;
+  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent so it looks more appealing*/
+  border-radius: 10px; /* for softer look */
+  margin-bottom: 1em
+}
+
+/* remove bottom border for the last fieldset for better look*/
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/* styles for labels */
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* styles for input, textarea, and select */
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+/* styles for text input and textarea */
+input,
+textarea {
+  background-color: #ffffff;
+  border: 1px solid #0a0a23;
+  color: #000000;
+}
+
+/* styles for inline elements in radio element */
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  display: inline;
+}
+
+/* Styles for submit button */
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  border-color: black;
+  min-width: 300px;
+}
+input[type="submit"]:hover {
+  background-color: #cccccc; /* different when hovered over */
+}
+.programme-type {
+  margin-bottom: 2em;
+}

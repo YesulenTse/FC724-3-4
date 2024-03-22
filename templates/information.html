@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <!-- Include the header -->
+  {% include 'header.html' %}
+
+  <!-- Information page content -->
+  <div class="welcome-box">
+    <h1>Information page</h1>
+    <p>Why this data is important:</p>
+  </div>
+
+  <!-- Container for the purpose and benefit of the form -->
+  <div class="container">
+    <!-- Three sections -->
+    <div class="section">
+      <h2>Identify Further Improvement</h2>
+      <p>By hearing your experience at GIC, we can identify what we can do to evaluate your experience. We believe it will increase the satisfaction and academic scores of students.</p>
+    </div>
+    <div class="section">
+      <h2>Personalised education and support</h2>
+      <p>It is possible that we could help and support students who have special needs or preference. Everyone should feel welcome at GIC.</p>
+    </div>
+    <div class="section">
+      <h2>Program enhancement</h2>
+      <p>We are open to any opinions of the programs' further enhancement and what we could do to make you enjoy your studies at class.</p>
+    </div>
+  </div>
+
+  <!-- Links to other pages -->
+  <div class="container">
+    <div class="section">
+      <!-- Home page link -->
+      <h2>Home</h2>
+      <p>To go back to the home page:</p>
+      <div class="box home">
+        <a target="_self" href="{{ url_for('index') }}" aria-label="Go to Home Page">
+          <img class="extra-img" src="{{ url_for('static', filename='logo.jpg') }}" alt="Home Page" aria-label="Home Page">
+        </a>
+      </div>
+    </div>
+    <div class="section">
+      <!-- Questionnaire page link -->
+      <h2>Questionnaire</h2>
+      <p>To fill out the questionnaire:</p>
+      <div class="box questionnaire">
+        <a target="_self" href="{{ url_for('questionnaire') }}" aria-label="Go to Questionnaire Page">
+          <img cla<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- University of Glasgow link -->
+    <a href="https://www.gla.ac.uk/" id="uofg-link">
+      <img id="name" role="img" alt="University of Glasgow building" src="name.gif" aria-label="University of Glasgow">
+    </a>
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <!-- Home page link -->
+        <li><a href="home.html" aria-label="Home Page">HOME</a></li>
+        <!-- Questionnaire page link -->
+        <li><a href="questionnaire.html" aria-label="Questionnaire Page">QUESTIONNAIRE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Information page content -->
+  <div class="welcome-box">
+    <h1>Information page</h1>
+    <p>Why this data is important:</p>
+  </div>
+  <!-- Container for the purpose and benefit of the form -->
+  <div class="container">
+    <!-- Three sections -->
+    <div class="section">
+      <h2>Identify Further Improvement</h2>
+      <p>By hearing your experience at GIC, we can identify what we can do to evaluate your experience. We believe it will increase the satisfaction and academic scores of students.</p>
+    </div>
+    <div class="section">
+      <h2>Personalised education and support</h2>
+      <p>It is possible that we could help and support students who have special needs or preference. Everyone should feel welcome at GIC.</p>
+    </div>
+    <div class="section">
+      <h2>Program enhancement</h2>
+      <p>We are open to any opinions of the programs' further enhancement and what we could do to make you enjoy your studies at class.</p>
+    </div>
+  </div>
+  <!-- Links to other pages -->
+  <div class="container">
+    <div class="section">
+      <!-- Home page link -->
+      <h2>Home</h2>
+      <p>To go back to the home page:</p>
+      <div class="box home">
+        <a target="_self" href="home.html" aria-label="Go to Home Page">
+          <img class="extra-img" src="logo.jpg" alt="Home Page" aria-label="Home Page">
+        </a>
+      </div>
+    </div>
+    <div class="section">
+      <!-- Questionnaire page link -->
+      <h2>Questionnaire</h2>
+      <p>To fill out the questionnaire:</p>
+      <div class="box questionnaire">
+        <a target="_self" href="questionnaire.html" aria-label="Go to Questionnaire Page">
+          <img class="extra-img" src="logo.jpg" alt="Questionnaire Page" aria-label="Questionnaire Page">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <footer>
+      <p>Author: Yesulen Tsedensodnom<br>
+      <a href="mailto:2960733T@student.gla.ac.uk">2960733T@student.gla.ac.uk</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+ss="extra-img" src="{{ url_for('static', filename='logo.jpg') }}" alt="Questionnaire Page" aria-label="Questionnaire Page">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include the footer -->
+  {% include 'footer.html' %}
+</body>
+</html>
