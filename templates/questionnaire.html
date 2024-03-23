@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Questionnaire</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/styles2.css">
 </head>
 <body>
 <header>
     <!-- University of Glasgow link -->
     <a href="https://www.gla.ac.uk/" id="uofg-link">
-      <img id="name" src="name.gif" role="img" alt="University of Glasgow building" aria-label="University of Glasgow">
+      <img id="name" src="/static/name.gif" role="img" alt="University of Glasgow building" aria-label="University of Glasgow">
     </a>
     <!-- Navigation menu -->
     <nav>
       <ul>
         <!-- Home page link -->
-        <li><a href="home.html" aria-label="Home Page">HOME</a></li>
+        <li><a href="{{ url_for('index') }}" aria-label="Home Page">HOME</a></li>
         <!-- Information page link -->
-        <li><a href="information.html" aria-label="Information Page">INFO</a></li>
+        <li><a href="{{ url_for('information') }}" aria-label="Information Page">INFO</a></li>
       </ul>
     </nav>
 </header>
@@ -76,7 +76,7 @@
     <h2>Home</h2>
     <p>To go back to the home page:</p>
     <div class="box home">
-      <a target="_self" href="home.html"><img class="extra-img" src="logo.jpg" alt="home" aria-label="Home Page"></a>
+      <a target="_self" href="{{ url_for('index') }}"><img class="extra-img" src="/static/logo.jpg" alt="home" aria-label="Home Page"></a>
     </div>
   </div>
   <div class="section">
@@ -84,7 +84,7 @@
     <h2>Information</h2>
     <p>To read more of the data collection and its purpose:</p>
     <div class="box information">
-      <a target="_self" href="information.html"><img class="extra-img" src="logo.jpg" alt="information" aria-label="Information Page"></a>
+      <a target="_self" href="{{ url_for('information') }}"><img class="extra-img" src="/static/logo.jpg" alt="information" aria-label="Information Page"></a>
     </div>
   </div>
 </div>

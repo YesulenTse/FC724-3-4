@@ -1,0 +1,86 @@
+/* stylesheet for all three pages
+but the questionnaire page has an
+extra ss since it might be too long */
+header {
+  margin: -10px -10px 0;
+  width: 110%; /* extend width for better coverage */
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+h1 {
+font-size:6vw;
+}
+#name, #uofg-link {
+  aspect-ratio: 35/13;/*  aspect ratio for proper scaling */
+  display: flex; /*  flexbox for alignment */
+}
+nav {
+  width: 50%;
+  height: 50px;
+  margin:auto;
+  text-align: center; /* place items evenly */
+}
+
+/* style for the nav link on top of page */
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+body {
+  background-image: url('UofG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  background-attachment: fixed; /* the image will not move with text */
+}
+.welcome-box {
+  max-width: 60vw; /* 60% of the view so it doesn't take too much space */
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 200%;
+}
+.welcome-box, .section, footer {
+background-color: rgba(255, 255, 255, 0.6);
+}
+.container, .footer{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.section, footer {
+  width: 45%;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 20px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: auto;
+}
+.extra-img {
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;  /* let image stay within container */
+  border-radius: 10px;
+}

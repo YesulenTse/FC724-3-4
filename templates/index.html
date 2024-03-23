@@ -1,10 +1,63 @@
-{% extends 'base.html' %}
-
-{% block title %}Welcome Page{% endblock %}
-
-{% block content %}
-<div class="welcome-box">
-  <h1>Welcome</h1>
-  <p>Welcome to the Data Collection Website. On this platform, you can fill out a questionnaire to help us out.</p>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<!-- navigation part to access other pages -->
+  <header>
+    <!-- University of Glasgow link -->
+    <a href="https://www.gla.ac.uk/" id="uofg-link">
+      <img id="name" role="img" alt="University of Glasgow building" src="/static/name.gif" aria-label="University of Glasgow"></a>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+          <!-- Info page link -->
+          <li><a href="{{ url_for('information') }}" aria-label="Information Page">INFO</a></li>
+          <!-- Questionnaire page link -->
+          <li><a href="{{ url_for('questionnaire') }}" aria-label="Questionnaire Page">QUESTIONNAIRE</a></li>
+        </ul>
+    </nav>
+  </header>
+  <!-- the header is in a box -->
+  <div class="welcome-box">
+    <h1>Welcome</h1>
+    <p>Welcome to the Data Collection Website. On this platform, you can fill out a questionnaire to help us out.</p>
+  </div>
+  <!-- on the home page, you can choose to go to two pages -->
+  <div class="container">
+    <!-- first section -->
+    <div class="section">
+      <h2>Information</h2>
+      <p>To read more of the data collection and its purpose:</p>
+      <!-- Information page link -->
+      <div class="box information">
+        <a target="_self" href="{{ url_for('information') }}" aria-label="Go to Information Page">
+          <img class="extra-img" src="/static/logo.jpg" alt="Information Page" aria-label="Information Page">
+        </a>
+      </div>
+    </div>
+    <!-- second section -->
+    <div class="section">
+      <h2>Questionnaire</h2>
+      <p>To fill out the questionnaire:</p>
+      <!-- Questionnaire page link -->
+      <div class="box questionnaire">
+        <a target="_self" href="{{ url_for('questionnaire') }}" aria-label="Go to Questionnaire Page">
+          <img class="extra-img" src="/static/logo.jpg" alt="Questionnaire Page" aria-label="Questionnaire Page">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- space for the footer and info about the author -->
+  <div class="footer">
+    <footer>
+      <p>Author: Yesulen Tsedensodnom<br>
+      <a href="mailto:2960733T@student.gla.ac.uk">2960733T@student.gla.ac.uk</a></p>
+    </footer>
+  </div>
+</body>
+</html>
