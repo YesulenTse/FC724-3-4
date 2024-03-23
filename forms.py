@@ -1,23 +1,28 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SelectField, RadioField
+from wtforms import StringField, TextAreaField, SelectField
 from wtforms.validators import InputRequired
 
-
 class Questionnaire(FlaskForm):
-    name = StringField('name', validators=[InputRequired()])
-    course = StringField('course', validators=[InputRequired()])
-    short_answer = TextAreaField('short-answer', validators=[InputRequired()])
-    long_answer = TextAreaField('long-answer', validators=[InputRequired()])
+    first_name = StringField('First Name', validators=[InputRequired()])
+    last_name = StringField('Last Name', validators=[InputRequired()])
+    email = StringField('Email', validators=[InputRequired()])
+    student_number = StringField('Student Number', validators=[InputRequired()])
+    programme_type = SelectField('Programme Type', choices=[
+        ('undergraduate', 'Undergraduate'),
+        ('postgraduate', 'Postgraduate')
+    ], validators=[InputRequired()])
+    grades = SelectField('Grades', choices=[
+        ('90+', '90+'),
+        ('80+', '80+'),
+        ('70+', '70+'),
+        ('60+', '60+'),
+        ('other', 'Other')
+    ], validators=[InputRequired()])
     satisfaction = SelectField('Overall Satisfaction', choices=[
-        ('', 'Select Satisfaction Level'),
         ('very-satisfied', 'Very Satisfied'),
         ('satisfied', 'Satisfied'),
         ('neutral', 'Neutral'),
         ('unsatisfied', 'Unsatisfied'),
         ('very-unsatisfied', 'Very Unsatisfied')
     ], validators=[InputRequired()])
-    recommend = RadioField('Would you recommend this course to others?', choices=[
-        ('yes', 'Yes'),
-        ('no', 'No')
-    ], validators=[InputRequired()])
-    improvements = TextAreaField('Suggestions for Improvement', validators=[InputRequired()])
+    suggestions = TextAreaField('Suggestions')
